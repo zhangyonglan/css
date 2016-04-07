@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        ul a{text-decoration:none;font-size:16px;color:#333;}
+        ul.imglist{
+            margin:0 auto;/*让ul结构布局居中*/
+            width:536px; /*固定宽度让子级li准确一排只拍3个*/
+            overflow:hidden;/*因为ul的子级使用float,属性会产生浮动，
+            所以使用清除子级使用float对父级产生不能撑开问题；*/
+            list-style:none;
+            border:1px solid red;}
+        ul.imglist li{ float:left; padding:4px 8px; width:160px}
+        /*float:left,让li靠左并排*/
+        ul.imglist li img{ display:block; width:160px; height:90px}
+        /*图片独占一行，设置好图片高度宽度*/
+        ul.imglist li span{ display:block; width:100%; height:30px; line-height:30px; background:#F6F6F6}
+        /*display:block;让Span独占一行，width:100%,height:30px;设置宽度高度，
+        宽度会继承父级li宽度，line-height:30px;设置文字在30px中垂直居中；*/
+    </style>
+
+</head>
+<body>
+<!--
+html关键点：
+使用ul li组合列表标签布局，每个li盒子放图片+文字标题内容，li盒子
+直接使用a超链接标签将图片和文字内容包裹着，使用img标签引入图片，
+使用span标签与img形成两个盒子而CSS分别设置独占一行功能效果的样式
+（display:block），避免文字和图片排成一排而非上下结构。
+-->
+<ul class="imglist">
+    <li>
+        <a href="#" target="_blank">
+            <img src="1_150703005755_1.png" />
+            <span>自制快手糟黄瓜 吃完整个</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="#" target="_blank">
+            <img src="1_150703005755_1.png" />
+            <span>标题内容 吃完整个</span>
+        </a>
+    </li>
+    <li>
+        <a href="#" target="_blank">
+            <img src="1_150703005755_1.png" />
+            <span>自制快手糟黄瓜 吃完整个</span>
+        </a>
+    </li>
+    <li>
+        <a href="#" target="_blank">
+            <img src="1_150703005755_1.png" />
+            <span>自制快手糟黄瓜 吃完整个</span>
+        </a>
+    </li>
+    <li>
+        <a href="#" target="_blank">
+            <img src="1_150703005755_1.png" />
+            <span>自制快手糟黄瓜 吃完整个</span>
+        </a>
+    </li>
+    <li>
+        <a href="#" target="_blank">
+            <img src="1_150703005755_1.png" />
+            <span>自制快手糟黄瓜 吃完整个</span>
+        </a>
+    </li>
+</ul>
+</body>
+</html>

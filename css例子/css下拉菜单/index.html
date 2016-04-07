@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            list-style:none;
+        }
+        ul.mainMenu{
+            width:1000px;
+            height:50px;
+            margin:50px auto;
+            /*overflow:hidden;*/
+
+            background:#ccc;
+        }
+        ul.mainMenu li{
+            /*float:left;*/
+            display:inline-block;
+            width:100px;
+            padding:10px 50px;
+            line-height:30px;
+            text-align:center;
+        }
+        ul.mainMenu li:hover{
+            color:#fff;
+            background:#f90;
+            font-weight:bold;
+            cursor:pointer;
+        }
+
+        ul.secondMenu{
+            display:none;
+        }
+        ul.mainMenu li:nth-child(1):hover{
+
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <ul class="mainMenu">
+        <li>
+            <span>div+cxx</span>
+            <ul class="secondMenu">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </li><!--
+
+        --><li>
+            <span>css入门</span>
+            <ul class="secondMenu">
+                <li>入门一</li>
+                <li>入门儿</li>
+                <li>入门三</li>
+                <li>入门四</li>
+                <li>入门五</li>
+            </ul>
+        </li><!--
+        --><li>html基础</li><!--
+        --><li>div+css技巧</li><!--
+        --><li>div+css模板</li>
+
+    </ul>
+</nav>
+</body>
+</html>
+<script>
+    var mainMenu=document.getElementsByClassName("mainMenu");
+    /*需要获取子级节点*/
+
+    for(var i=0;i<mainMenu.length;i++){
+
+        mainMenu.onmouseover=function(){
+            console.log(0);
+
+        }
+    }
+</script>

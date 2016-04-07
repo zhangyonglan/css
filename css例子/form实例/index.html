@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        label{
+            float:left;
+            width:80px;
+            line-height:25px;
+        }
+        form{
+            margin:0;
+        }
+        input{
+            /*width:180px;
+            border:1px solid #808080;*/
+
+        }
+        textarea{
+            width:250px;
+            height:150px;
+        }
+        #sbutton{
+            margin-left:80px;
+            margin-top:5px;
+            width:80px;
+        }
+        br{
+            clear:left;
+        }
+    </style>
+</head>
+<body>
+<label for="name">姓名：</label>
+
+<input type="text" name="name" id="name"/>
+<br/>
+<label for="email">邮件：</label>
+
+<input type="email" name="" id="email"/>
+<br/>
+<label for="remarks">备注:</label>
+<textarea id="remarks" cols="30" rows="2">
+
+</textarea>
+<br/>
+<input type="submit" value="提交"/>
+<hr/>
+
+<form action="" method="post">
+    <label for="user">姓名：</label>
+    <input type="text" id="user" name="user" value=""/><br/>
+
+    <label for="email2">邮件：</label>
+    <input type="text" id="email2" name="email" value=""/><br/>
+
+    <label for="comment">备注</label>
+    <textarea id="comment" name="comment">
+
+    </textarea><br/>
+
+    <input type="submit" id="sbutton" value="确定"/><br/>
+</form>
+</body>
+</html>

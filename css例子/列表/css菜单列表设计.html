@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*
+        1,位li元素添加position:relative和border-bottom风格
+        2,使用position:absolute额负数的bottom定位属性将下横线两端的元素下一
+        3,注意：请使用相对于字体尺寸（em）控制边距
+        */
+        .menu {
+            width: 500px;
+            list-style: none;
+            margin: 0 0 2em;
+            padding: 0;
+            font: 150%/100% Arial, Helvetica, sans-serif;
+        }
+        .menu li {
+            clear: both;
+            margin: 0;
+            padding: 0 0 1.8em 0;
+            position: relative;
+            border-bottom: dotted 2px #999;
+        }
+        .menu strong {
+            background: #fff;
+            padding: 0 10px 0 0;
+            font-weight: normal;
+            position: absolute;
+            bottom: -.3em;
+            left: 0;
+        }
+        .menu em {
+            background: #fff;
+            padding: 0 0 0 5px;
+            font: 110%/100% Georgia, "Times New Roman", Times, serif;
+            position: absolute;
+            bottom: -.2em;
+            right: 0;
+        }
+        .menu sup {
+            font-size: 60%;
+            color: #666;
+            margin-left: 3px;
+        }
+/*--------------------IE6-----------------------------*/
+        /* clearfix */
+        .menu li:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        .menu li {display: inline-block;}
+        /* Hides from IE-mac \*/
+        * html .menu li {height: 1%;}
+        .menu li {display: block;}
+        /* End hide from IE-mac */
+    </style>
+</head>
+<body>
+<ul class="menu">
+    <li><strong>CSS Design</strong><em>250<sup>95</sup></em></li>
+    <li><strong>CSS Design</strong><em>250<sup>95</sup></em></li>
+    <li><strong>CSS Design</strong><em>250<sup>95</sup></em></li>
+
+</ul>
+</body>
+</html>
